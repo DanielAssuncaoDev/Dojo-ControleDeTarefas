@@ -1,4 +1,3 @@
-import {useNavigate} from 'react-router-dom'
 import {UseAtividadeContext} from '../../context.js'
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,8 +10,6 @@ import Cabecalho from '../../components/Cabecalho/index.js'
 import Atividade from '../../components/Atividade'
 
 export default function Home(){
-    const nav = useNavigate()
-
     const {
         atividadeEstado: {titulo, atividades, idToUpdate},
         setTitulo,
@@ -25,7 +22,7 @@ export default function Home(){
     const UpdadeOrCreate = () => {
         if (titulo){
             if (idToUpdate === undefined)
-            OnCreateAtividade()
+                OnCreateAtividade()
             else
                 OnUpdateTitulo()
         }else{
@@ -42,6 +39,7 @@ export default function Home(){
         })
 
         setTitulo('')
+        toast.success('Atividade Criada com Sucesso')
     }
 
     const OnUpdateTitulo = () => {

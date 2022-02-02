@@ -58,7 +58,3 @@ export const Container = style.div`
     }
 
 `
-
-
-// $ git config --global user.name "DanielAssuncaoDev"
-// $ git config --global user.email danielaristotelis@gmail.com

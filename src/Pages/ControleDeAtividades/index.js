@@ -1,16 +1,16 @@
-import {useNavigate} from 'react-router-dom'
 import {useEffect} from 'react'
 import {UseAtividadeContext} from '../../context.js'
 
 import Atividade from '../../components/Atividade'
 import Cabecalho from '../../components/Cabecalho/index.js'
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {ContainerAtividades} from '../../components/styled/ContainerAtividades'
 import {Container} from './styled'
 
 export default function ControleDeTarefas(){
-    const nav = useNavigate()
-
     const {
         atividadeEstado: {atividades},
     } = UseAtividadeContext()
@@ -64,6 +64,7 @@ export default function ControleDeTarefas(){
                     </div>
                 </div>
             </Container>
+            <ToastContainer/>
         </div>
     )
 }
